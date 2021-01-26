@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css.css/style.css">
+  <link rel="stylesheet" href="css.css/modoClaroOscuro.css">
+  <link rel="stylesheet" id="mainstyle" href="">
+  <script src="https://kit.fontawesome.com/4461fe01ff.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href=""> 
+  <title>Editor de Memes</title>
+
+</head>
+  <body>
+    
+    <header class="header">
+      <nav class="first-section" id="first-section" > 
+        <h1 class="main-title" id="main-title">Generador de Memes</h1>
+        
+    
+        <button class="img-but" id="img-but">
+          <i class="far fa-file-image"></i> Imagen
+        </button>
+        
+        <button class="txt-but" id= "txt-but">
+          <i class="fas fa-font"></i> Texto</button>
+          <!--
+        <button class="cla-osc-but" id="dark/ligth">
+          <i class="fas fa-adjust"></i> Modo claro/oscuro 
+        </button> -->
+        
+        <i class="fas fa-adjust">
+          <div class="day-night">
+          <input type="checkbox" class="checkbox" id="checkbox">
+          <label for="checkbox" class="sun-moon">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+          </label>
+       
+          </div>
+        </i>
+
+      </nav>
+    </header>
+
+
+    <main class="main" id="main">
+      <section class="section" id="section">
+        <article id="first-text" class="top-input">TOP TEXT</article>
+        <article class="center-text"id='center-text'></article>
+        <article id="second-text" class="bottom-text">BOTTOM TEXT</article>
+      </section>
+
+      <button class="download-but">
+        Descargar Meme
+        <i class="fas fa-download button-icon-text green-button-icon" aria-hidden="true"></i>
+    </button>
+
+    </main>
+    
+    <!-- EDICION ASIDE IMAGEN / texto --> 
+    <aside class="aside" id="aside">
+      <form class="formulario">
+      
+      
+
+     <!-- EDICION FONDO IMAGEN -->   
+      <section id="img">
+
+        <div class="url-fondo"></div>
+          
+        <h2 class="titulo-aside">IMAGEN</h2>
+
+          <label for="url" URL >URL</label>
+          <input type="text" id="url-img">  
+
+        <h4>FONDO</h4>
+          
+
+          <input type="color" id="color-back" value="#ffffff">
+          <span id="mback-color" aria-hidden="true">#ffffff
+          </span>
+
+        </div>
+         
+          <select id="estilos-back" class="estilos-back">
+            <option value="ninguno">Ninguno</option>
+            <option value="aclarar">Aclarar</option>
+            <option value="oacurecer">Oscurecer</option>
+            <option value="diferencia">Diferencia</option>
+            <option value="luminosidad">Luminosidad</option>
+            <option value="multiplicar">Multiplicar</option>
+          </select>
+
+      
+
+      <!-- FILTROS IMAGEN --> 
+      <h4 class="filtros" id="filtros">FILTROS</h4>
+
+      <div class="brillo">
+        <label class="brillo" for="brillo">Brillo</label>
+        <input type="range" id="brillo" value="1">
+      </div>
+
+      <div class="opacidad">
+        <label class="opacidad" for="opacidad">Opacidad</label>
+        <input type="range" id="brillo" value="1">
+      </div>
+
+      <div class="contraste">
+          <label class="contraste" for="contraste">Brillo</label>
+          <input type="range" id="contraste" value="1">
+      </div>
+
+      <div class="desenfoque">
+          <label class="desenfoque" for="desenfoque">Desenfoque</label>
+          <input type="range" id="desenfoque" value="1">
+      </div>
+
+      <div class="grises">
+          <label class="grises" for="grises">Escala Grises</label>
+          <input type="range" id="grises" value="1">
+      </div>
+
+      <div class="sepia">
+        <label class="sepia" for="sepia">Sepia</label>
+        <input type="range" id="sepia" value="1">
+      </div>
+
+      <div class="Hue">
+        <label class="hue" for="hue">Hue</label>
+        <input type="range" id="hue" value="1">
+      </div>
+
+        <div class="saturado">
+          <label class="saturado" for="saturado">Saturado</label>
+          <input type="range" id="saturado" value="1">
+        </div>
+
+        <div class="negativo">
+            <label class="negativo" for="negativo">Negativo</label>
+            <input type="range" id="negativo" value="1">
+        </div>
+
+      </section>  
+
+      <!-- EDICION TEXTO -->   
+
+      <!--  TEXTO SUPERIOR E INFERIOR -->
+    <section id="texto" class="texto">
+      <h2 class="titulo-aside">TEXTO</h2>
+
+        <div>
+          <label for="top-input">Superior</label>
+          <input type="text" id="top-input" value="TOP TEXT">
+        </div>
+
+        <div>
+          <label for="top-check"><input id="top-check" type="checkbox" class="topcheck">Sin texto superior</label>
+        </div>
+
+        <div>
+          <label for="bot">Inferior</label>
+          <input type="text" id="bot" value="BOTTOM TEXT">
+        </div>
+
+        <div>
+          <label for="top-check-2"><input id="top-check-2" type="checkbox" class="topcheck">Sin texto inferior</label>
+        </div>
+
+
+        <!--  TIPO DE FUENTE -->
+        <div>
+          <label for="option">Fuente</label>
+          <select name="option" id="option">
+            <option class="arial" value="arial">Arial</option>
+            <option class="arialblack" value="arial-black">Arial Black</option>
+            <option class="american" value="american-typewriter">American Typewriter</option>
+            <option value="andale-mono">Andale Mono</option>
+            <option class="comicsans" value="comic-sans">Comic Sans</option>
+            <option class="Impact" value="Impact">Impact</option>
+            <option class="Helvetica" value="helvetica">Helvetica</option>
+            <option class="verdana" value="verdana">Verdana</option>
+            <option class= "times" value="Times-new-roman">Times New Roman</option>
+          </select>
+        </div>
+        <div class="font-button">
+          <input id="input-size" type="number" value="40" min="0" max="50">
+          <button id="izquierda" class="alineado"><i class="fas fa-align-left"></i></button>
+          <button id="centrar" class="alineado"><i class="fas fa-align-center"></i></button>
+          <button id="derecha" class="alineado"><i class="fas fa-align-right"></i></button>
+        </div>
+
+        <!--  COLORES FONDO Y FUENTE -->
+        <div class="font-button">
+          <div>
+            <label for="color">Color</label>
+            <div class="color-buttons">
+              <input type="color" class ="paleta" id="color" value="#000000">
+              <span id="color-text">#000000</span>
+            </div>
+          </div>
+          <div>
+            <label for="fondo">Fondo</label>
+            <div class="color-buttons">
+              <input type="color" class="paleta2"id="fondo" value="#ffffff">
+              <span id="back-color">#ffffff</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          
+          <label for="transparente"><input type="checkbox" id="transparente" class="topcheck">Fondo transparente</label>
+        </div>
+
+        <!--  CONTORNO DE FUENTE -->
+        <div>
+          <label>Contorno</label>
+        </div>
+
+        <div class="buton-contorno">
+          <button class="ninguno">Ninguno</button>
+          <button class="claro" id="borde-claro">Claro</button>
+          <button class="oscuro" id="borde-oscuro">Oscuro</button>
+        </div>
+
+
+        <!--  ESPACIADO DE FUENTE -->
+        <div>
+          <label for="espaciado">Espaciado</label>
+          <input type="number" id="espaciado" min="10" max="50"value="30">
+        </div>
+
+        <!--  INTERLINEADO DE FUENTE -->
+        <div>
+          <label for="interlineado">Interlineado</label>
+          <select name="interlineado" id="interlineado">
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+      </form>
+    </section>
+    </aside>
+  
+  
+    <script src="./js/app.js"></script>
+  </body>
+</html>
