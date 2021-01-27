@@ -100,7 +100,9 @@
 
   
  /*estilos aside */
- /*.texto{
+
+ /*
+ .texto{
    display: none;
  }*/
 
@@ -117,6 +119,7 @@
 .titulo-aside{
   padding: 5% 0;
   text-align: center;
+  margin-top: 8%;
 }
 
 .aside div{
@@ -284,16 +287,27 @@ body.dark{
 }
 
 /* boton download */
+
 .download-but{
-  border-radius: 5px;
+  border-radius: 10px;
   border-style: none;
-  height: 30px;
+  height: 40px;
   width: 150px;
-  background-color: rgb(16, 182, 85);
+  background-color: rgb(40, 196, 157);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 500;
   display: flex;
   align-self: flex-end;
   margin-bottom: 40px;
   margin-left: 10px;
   padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.download-but:focus{
+  border-style: none;
+}
+
+.green-button-icon{
+  padding: 3%;
 }
