@@ -101,10 +101,64 @@
   
  /*estilos aside */
 
+
  /*
  .texto{
    display: none;
  }*/
+
+.encabezado{
+  margin: 2%;
+}
+.url{
+  font-size: 0.8rem;
+}
+
+.color-back{
+  display: flex;
+  flex-direction: row !important;
+  margin: 1% !important;
+  width: 90% !important;
+  background-color: var(--clarito);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.estilos-back{
+  width: 50%;
+  display: flex;
+  flex-direction: row !important;
+  margin-left: 15%;
+
+}
+
+.fondo{
+  margin: 1%;
+  font-size: 0.7rem;
+}
+.filtros{
+  margin: 3%;
+  font-size: 0.8rem;
+}
+
+.brillo, .opacidad, .contraste, .desenfoque, .grises, .sepia, .hue, .saturado, .negativo{
+  font-size: 0.85rem;
+}
+
+.reestablecer{
+  border-radius: 30px;
+  border-style: none;
+  height: 40px;
+  width: 90%;
+  background-color: rgb(40, 196, 157);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+
+}
 
  input{
    border-style: none;

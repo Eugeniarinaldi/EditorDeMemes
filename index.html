@@ -66,24 +66,24 @@
       
 
      <!-- EDICION FONDO IMAGEN -->   
-      <section id="img">
-
-        
+     <section id="img"> 
           
         <h2 class="titulo-aside">IMAGEN</h2>
-
-          <label for="url" URL >URL</label>
+        
+        <div class="encabezado">
+          <label for="url" URL class="url" >URL</label>
           <input type="text" id="url-img">  
 
-        <h4>FONDO</h4>
+          <h4 class="fondo">FONDO</h4>
           
 
-          <input type="color" id="color-back" value="#ffffff">
-          <span id="mback-color" aria-hidden="true">#ffffff
-          </span>
-
-        </div>
          
+          <div class= "color-back">
+            <input type="color" id="color-back"value="#ffffff">
+              <span id="mback-color" aria-hidden="true">#ffffff
+              </span>
+          
+
           <select id="estilos-back" class="estilos-back">
             <option value="ninguno">Ninguno</option>
             <option value="aclarar">Aclarar</option>
@@ -92,56 +92,59 @@
             <option value="luminosidad">Luminosidad</option>
             <option value="multiplicar">Multiplicar</option>
           </select>
+          </div>
 
-      
+        </div>
 
       <!-- FILTROS IMAGEN --> 
       <h4 class="filtros" id="filtros">FILTROS</h4>
 
-      <div class="brillo">
-        <label class="brillo" for="brillo">Brillo</label>
-        <input type="range" id="brillo" value="1">
+      <div class="cont-brillo">
+        <label class="brillo" for="brightness">Brillo</label>
+        <input type="range" name= "brightness" id="brillo" min="0.5" max="1.5" step="0.1" value="1">
       </div>
 
-      <div class="opacidad">
-        <label class="opacidad" for="opacidad">Opacidad</label>
-        <input type="range" id="opacidad" value="1">
+      <div class="cont-opacidad">
+        <label class="opacidad" for="opacity">Opacidad</label>
+        <input type="range" name ="opacity" id="opacidad"min="0.5" max="1.5" step="0.1"  value="1">
       </div>
 
-      <div class="contraste">
-          <label class="contraste" for="contraste">Brillo</label>
-          <input type="range" id="contraste" value="1">
+      <div class="cont-contraste">
+          <label class="contraste" for="contrast">Contraste</label>
+          <input type="range" name = "contrast"  id="contraste" min="100" max="400" step="1" value="100">
       </div>
 
-      <div class="desenfoque">
-          <label class="desenfoque" for="desenfoque">Desenfoque</label>
-          <input type="range" id="desenfoque" value="1">
+      <div class="cont-desenfoque">
+          <label class="desenfoque" for="blur">Desenfoque</label>
+          <input type="range" name= "blur" id="desenfoque" min="0" max="10" step="0.1" value="0">
       </div>
 
-      <div class="grises">
-          <label class="grises" for="grises">Escala Grises</label>
-          <input type="range" id="grises" value="1">
+      <div class="cont-grises">
+          <label class="grises" for="grayscale">Escala Grises</label>
+          <input type="range" name= "grayscale" id="grises" min="0" max="100" step="1" value="0">
       </div>
 
-      <div class="sepia">
+      <div class="cont-sepia">
         <label class="sepia" for="sepia">Sepia</label>
-        <input type="range" id="sepia" value="1">
+        <input type="range" name="sepia" id="sepia" min="0" max="100" step="1" value="0">
       </div>
 
-      <div class="Hue">
+      <div class="cont-Hue">
         <label class="hue" for="hue">Hue</label>
-        <input type="range" id="hue" value="1">
+        <input type="range" name="hue" id="hue" min="0" max="359" step="1" value="0">
       </div>
 
-        <div class="saturado">
-          <label class="saturado" for="saturado">Saturado</label>
-          <input type="range" id="saturado" value="1">
+        <div class="cont-saturado">
+          <label class="saturado" for="saturate">Saturado</label>
+          <input type="range" id="saturado" min="100" max="1000" step="10" value="100">
         </div>
 
-        <div class="negativo">
-            <label class="negativo" for="negativo">Negativo</label>
-            <input type="range" id="negativo" value="1">
+        <div class="cont-negativo">
+            <label class="negativo" for="invert">Negativo</label>
+            <input type="range" id="negativo" min="0" max="1" step="0.1" value="0">
         </div>
+
+        <button class="reestablecer" id="reestablecer"> Reestablecer Filtros</button>
 
       </section>  
 

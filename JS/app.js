@@ -1,4 +1,3 @@
-// Elemtos a los que le aplicaremos el innerHTML o donde se ingresa el DOM
 const firstText = document.getElementById('first-text');
 const secondText = document.getElementById('second-text');
 const color = document.getElementById('color');
@@ -9,7 +8,6 @@ const centerText = document.getElementById('center-text');
 const darkLight = document.getElementById('dark/light')
 const checkbox = document.getElementById('checkbox');
 
-// Elementos a los que se les aplicara los eventos
 const topInput = document.getElementById('top-input');
 const topCheck = document.getElementById('top-check');
 const topcheck2 = document.getElementById ('top-check-2')
@@ -34,6 +32,18 @@ const img = document.getElementById ('img')
 const texto = document.getElementById ('texto')
 const image = document.getElementById('image')
 
+const brillo = document.getElementById('brillo')
+const opacidad = document.getElementById('opacidad')
+const contraste = document.getElementById('contraste')
+const desenfoque = document.getElementById('desenfoque')
+const grises = document.getElementById('grises')
+const sepia = document.getElementById('sepia')
+const hue = document.getElementById('hue')
+const saturado = document.getElementById('saturado')
+const negativo = document.getElementById('negativo')
+const reestablecer = document.getElementById('reestablecer')
+
+/* boton texto */
 topInput.addEventListener('keyup', () => {
   firstText.innerHTML = topInput.value;
 });
@@ -126,15 +136,7 @@ transparente.addEventListener('click',(e) => {
   }
 })
 
-urlImg.addEventListener('keyup', (e)=>{
-  const src = urlImg.value;
-  centerText.style.backgroundImage = `url('${src}')`;
-  centerText.style.backgroundPosition ='center';
-  centerText.style.backgroundRepeat = 'no-repeat';
-  centerText.style.backgroundSize = 'contain';
 
-  console.log(src)
-})
 
 bordeClaro.addEventListener('click', (e) => {
   firstText.style.textShadow = '3px 1px 1px white';
@@ -170,7 +172,48 @@ checkbox.addEventListener('click',()=>{
   }
 })
 
-/* botones IMAGEN y TEXTO */
+/* funcionalidad seccion boton IMG */
+
+urlImg.addEventListener('keyup', (e)=>{
+  const src = urlImg.value;
+  centerText.style.backgroundImage = `url('${src}')`;
+  centerText.style.backgroundPosition ='center';
+  centerText.style.backgroundRepeat = 'no-repeat';
+  centerText.style.backgroundSize = 'contain';
+})
+
+
+/* Filtros */
+
+const filtroImg = ()=>{
+  centerText.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg)saturate(${saturado.value}%) invert(${negativo.value})`
+};
+
+brillo.addEventListener('change', filtroImg);
+opacidad.addEventListener('change', filtroImg);
+contraste.addEventListener('change', filtroImg);
+desenfoque.addEventListener('change', filtroImg);
+grises.addEventListener('change', filtroImg);
+sepia.addEventListener('change', filtroImg);
+hue.addEventListener('change', filtroImg);
+saturado.addEventListener('change', filtroImg);
+negativo.addEventListener('change', filtroImg);
+
+reestablecer.addEventListener('click',()=>{
+  brillo.value = '1'
+  opacidad.value = '1'
+  contraste.value = '100'
+  desenfoque.value = '1'
+  grises.value = '1'
+  sepia.value = '1'
+  hue.value = '1'
+  saturado.value = '100'
+  negativo.value = '1'
+  
+
+})
+
+/* funcionalidad botones IMAGEN y TEXTO */
 
 imgBut.addEventListener('click',(e)=>{
   img.style.display = '';
@@ -181,6 +224,4 @@ imgBut.addEventListener('click',(e)=>{
 txtBut.addEventListener('click',(e)=>{
   texto.style.display = '';
   img.style.display = 'none';
-
 })
-
