@@ -32,6 +32,7 @@ const img = document.getElementById ('img')
 const texto = document.getElementById ('texto')
 const image = document.getElementById('image')
 
+const colorBack = document.getElementById('color-back')
 const brillo = document.getElementById('brillo')
 const opacidad = document.getElementById('opacidad')
 const contraste = document.getElementById('contraste')
@@ -42,6 +43,10 @@ const hue = document.getElementById('hue')
 const saturado = document.getElementById('saturado')
 const negativo = document.getElementById('negativo')
 const reestablecer = document.getElementById('reestablecer')
+const downloadBut = document.getElementById('download-but')
+const interlineado = document.getElementById('interlineado')
+const dayNight = document.getElementById('day-night')
+const adjust = document.getElementById('adjust')
 
 /* boton texto */
 topInput.addEventListener('keyup', () => {
@@ -72,11 +77,9 @@ topcheck2.addEventListener('click', () =>{
 
 option.addEventListener('change', () => {
   firstText.style.fontFamily = `${option.value}`;
+  secondText.style.fontFamily = `${option.value}`
 });
 
-option.addEventListener('change', () => {
-  secondText.style.fontFamily = `${option.value}`;
-});
 
 inputSize.addEventListener('keyup', () => {
   firstText.style.fontSize = `${inputSize.value}px`
@@ -136,20 +139,36 @@ transparente.addEventListener('click',(e) => {
   }
 })
 
+/* contorno */
 
-
+//////////////////////* sin funcionar *///////////////////////////
 bordeClaro.addEventListener('click', (e) => {
   firstText.style.textShadow = '3px 1px 1px white';
   secondText.style.textShadow = '3px 1px 1px white';
 })
 
 bordeOscuro.addEventListener('click', () => {
-  firstText.style.webkitTextStroke  = '2px black';
-  secondText.style.webkitTextStroke  = '2px black';
+  firstText.style.textShadow  = '1px black';
+  secondText.style.textShadow  = '2px black';
 })
-/* no funciona el borde */
+//////////////////////* sin funcionar *///////////////////////////
 
 
+/* espaciado */
+const espaciadoTexto = () => {
+  firstText.style.padding = `${espaciado.value}px 50px`;
+  secondText.style.padding = `${espaciado.value}px 50px`;
+
+}
+espaciado.addEventListener('input', espaciadoTexto)
+
+/* interlineado */
+
+const interlinea = ('change', ()=>{
+  firstText.style.lineHeight = `${interlineado.value}`
+  secondText.style.lineHeight = `${interlineado.value}`
+})
+interlineado.addEventListener('change',interlinea)
 
 
 
@@ -161,7 +180,9 @@ checkbox.addEventListener('click',()=>{
     mainTitle.style.color = 'rgb(182, 182, 180)';
     main.style.backgroundColor = 'rgb(78, 78, 78)'
     aside.style.backgroundColor = '#2b2f3a'
-    aside.style.color = 'aliceblue'
+    aside.style.color = 'aliceblue';
+    dayNight.style.backgroundColor = '#2b2f3a';
+    adjust.style.color = 'rgb(182, 182, 180)'
 
   } else{
     firstSection.style.backgroundColor = 'rgb(182, 182, 180)';
@@ -169,10 +190,12 @@ checkbox.addEventListener('click',()=>{
     main.style.backgroundColor = 'aliceblue';
     aside.style.backgroundColor = 'rgb(182, 180, 180)';
     aside.style.color = '#2b2f3a'
+    dayNight.style.backgroundColor='rgb(182, 180, 180)'
+    adjust.style.color = '#2b2f3a'
   }
 })
 
-/* funcionalidad seccion boton IMG */
+/* funcionalidad boton IMG */
 
 urlImg.addEventListener('keyup', (e)=>{
   const src = urlImg.value;
@@ -183,7 +206,12 @@ urlImg.addEventListener('keyup', (e)=>{
 })
 
 
-/* Filtros */
+colorBack.addEventListener ('input', (e)=>{
+  centerText.style.backgroundColor = e.target.value;
+})
+
+
+/* Filtros imagen */
 
 const filtroImg = ()=>{
   centerText.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg)saturate(${saturado.value}%) invert(${negativo.value})`
@@ -198,6 +226,8 @@ sepia.addEventListener('change', filtroImg);
 hue.addEventListener('change', filtroImg);
 saturado.addEventListener('change', filtroImg);
 negativo.addEventListener('change', filtroImg);
+
+/* boton reestablecer filtros */
 
 reestablecer.addEventListener('click',()=>{
   brillo.value = '1'
@@ -225,3 +255,6 @@ txtBut.addEventListener('click',(e)=>{
   texto.style.display = '';
   img.style.display = 'none';
 })
+
+/* boton descargar meme */
+

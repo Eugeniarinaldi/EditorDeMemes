@@ -10,13 +10,15 @@
 }  
   
   /* colores */ 
-
 :root{
   --clarito: rgb(182, 180, 180);
   --mas-claro: aliceblue;
   --gris-mediano: rgb(143, 142, 142);
   --fondo-oscuro: rgb(78, 78, 78);
   --oscuro-azulado: #2b2f3a;
+  --verde-regular: #28c49d;
+  --verde-clarito: #6af8ce;
+  --verde-oscuro: #00926f;
 }
 
  /* Estilos seccion principal */
@@ -49,30 +51,38 @@
     margin-bottom: 0.62rem;
   }
 
-.img-but, .txt-but, .cla-osc-but{
+.img-but, .txt-but, .day-night{
     height: 35px;
     border-radius: 4px;
-    padding: 5px;
+    padding: 0.4rem;
     border-style: none;
     color: var(--oscuro-azulado);
     background-color: var(--clarito);
+    margin: 0.1875rem;
   }
 
+  .day-night{
+    width: 80px;
+  }
+
+  .botones-centrales{
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
 
 .img-but:hover{
     cursor: pointer;
     background-color: rgb(143, 142, 142);
   }
 
-.cla-osc-but:hover{
-    cursor: pointer;
-    background-color: rgb(143, 142, 142);
-  }
   
 .txt-but:hover{
     cursor: pointer;
     background: rgb(143, 142, 142);
   }
+
+/* ajustes seccion principal meme */
   
 .section{
     width: 60%;
@@ -100,9 +110,7 @@
 
   
  /*estilos aside */
-
-
- /*
+/*
  .texto{
    display: none;
  }*/
@@ -163,6 +171,7 @@
  input{
    border-style: none;
  }
+
 
 .aside{
     width: 21.3%;
@@ -278,10 +287,15 @@ input, select{
 .impact{
   font-family: Impact;
 }
+.opensans{
+  font-family: 'Open Sans', sans-serif;
+}
 
 .url-fondo{
   margin: 2%;
 }
+
+
 
 /* modo claro/oscuro */
 .day-night{
@@ -296,8 +310,8 @@ input, select{
   position: relative;
   padding: 5px;
   height: 26px;
-  width: 50px;
-  margin-right: 65px;
+  width: 4.8rem;
+  margin-right: 4.0625rem;
 }
 
 .checkbox{
@@ -306,7 +320,7 @@ input, select{
 }
 
 .checkbox:checked + .sun-moon .ball{
-  transform: translateX(24px);
+  transform: translateX(23px);
 }
 
 .fa-moon{
@@ -324,15 +338,16 @@ input, select{
   position: absolute;
   border-radius: 50%;
   top: 2.5px;
-  left: 3px;
+  left: 2px;
+  right: 2px;
 
 }
-
+/*
 body.dark{
   background-color: black;
   color: red;
 
-}
+}*/
 
 .fa-adjust{
   display: flex;

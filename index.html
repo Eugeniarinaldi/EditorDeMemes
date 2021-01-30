@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="María Eugenia Rinaldi">
+  <meta name="description" content="Generá tus propios memes y descargalos para usar en tus redes sociales">
+  <meta name="keywords" content="meme, imagen, texto, editor, generador meme">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css.css/style.css">
   <link rel="stylesheet" href="css.css/modoClaroOscuro.css">
   <link rel="stylesheet" id="mainstyle" href="">
@@ -17,30 +23,25 @@
       <nav class="first-section" id="first-section" > 
         <h1 class="main-title" id="main-title">Generador de Memes</h1>
         
-    
+      <div class="botones-centrales">
         <button class="img-but" id="img-but">
           <i class="far fa-file-image"></i> Imagen
         </button>
         
         <button class="txt-but" id= "txt-but">
           <i class="fas fa-font"></i> Texto</button>
-          <!--
-        <button class="cla-osc-but" id="dark/ligth">
-          <i class="fas fa-adjust"></i> Modo claro/oscuro 
-        </button> -->
         
-        <i class="fas fa-adjust">
-          <div class="day-night">
+        <div class="day-night" id="day-night">
+            <i class="fas fa-adjust" id="adjust"></i>
           <input type="checkbox" class="checkbox" id="checkbox">
           <label for="checkbox" class="sun-moon">
               <i class="fas fa-moon"></i>
               <i class="fas fa-sun"></i>
               <div class="ball"></div>
           </label>
-       
-          </div>
-        </i>
-
+        </div>
+        
+      </div>
       </nav>
     </header>
 
@@ -181,7 +182,7 @@
             <option class="arialblack" value="arial-black">Arial Black</option>
             <option class="american" value="american-typewriter">American Typewriter</option>
             <option value="andale-mono">Andale Mono</option>
-            <option class="comicsans" value="comic-sans">Comic Sans</option>
+            <option class="opensans" value="Sans  ">Open Sans</option>
             <option class="Impact" value="Impact">Impact</option>
             <option class="Helvetica" value="helvetica">Helvetica</option>
             <option class="verdana" value="verdana">Verdana</option>
