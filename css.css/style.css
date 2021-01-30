@@ -85,13 +85,13 @@
 /* ajustes seccion principal meme */
   
 .section{
-    width: 60%;
+    width: 53%;
     height: auto;
-    margin-top: 50px ;
+    margin-top: 3.125rem ;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid var(--gris-mediano);
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
   }
   
@@ -165,7 +165,12 @@
   justify-content: center;
   align-items: center;
   margin-left: 3%;
+}
 
+.reestablecer:hover{
+  background-color: var(--verde-oscuro);
+  color: white;
+  cursor: pointer;
 }
 
  input{
@@ -201,7 +206,7 @@
 }
 
 .formulario{
-  width: 300px;
+  width: 18.75rem;
 }
 
 .font-button{
@@ -340,6 +345,8 @@ input, select{
   top: 2.5px;
   left: 2px;
   right: 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
 
 }
 /*
@@ -360,21 +367,27 @@ body.dark{
 .download-but{
   border-radius: 10px;
   border-style: none;
-  height: 40px;
-  width: 150px;
+  height: 35px;
+  width: 160px;
   background-color: rgb(40, 196, 157);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   display: flex;
   align-self: flex-end;
-  margin-bottom: 40px;
+  margin-bottom: 26px;
   margin-left: 10px;
   padding: 5px;
   align-items: center;
   justify-content: center;
+  position: absolute;
 }
 .download-but:focus{
   border-style: none;
+}
+.download-but:hover{
+  background-color: var(--verde-oscuro);
+  color: white;
+  cursor: pointer;
 }
 
 .green-button-icon{
