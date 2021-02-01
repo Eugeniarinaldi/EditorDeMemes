@@ -15,7 +15,7 @@
   <!-- <meta property="og:image" content=" falta imagen con previsualizacion"> -->
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat&family=Open+Sans&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css.css/style.css">
   <link rel="stylesheet" href="css.css/modoClaroOscuro.css">
   <link rel="stylesheet" id="mainstyle" href="">
@@ -94,9 +94,9 @@
 
           <select id="estilos-back" class="estilos-back">
             <option value="unset">Ninguno</option>
-            <option value="aclarar">Aclarar</option>
-            <option value="oacurecer">Oscurecer</option>
-            <option value="diferencia">Diferencia</option>
+            <option value="lighten">Aclarar</option>
+            <option value="darken">Oscurecer</option>
+            <option value="difference">Diferencia</option>
             <option value="luminosity">Luminosidad</option>
             <option value="multiply">Multiplicar</option>
           </select>
@@ -109,17 +109,17 @@
 
       <div class="cont-brillo">
         <label class="brillo" for="brightness">Brillo</label>
-        <input type="range" name= "brightness" id="brillo" min="0.5" max="1.5" step="0.1" value="1">
+        <input type="range" name= "brightness" id="brillo" min="0" max="1" step="0.1" value="1">
       </div>
 
       <div class="cont-opacidad">
         <label class="opacidad" for="opacity">Opacidad</label>
-        <input type="range" name ="opacity" id="opacidad"min="0.5" max="1.5" step="0.1"  value="1">
+        <input type="range" name ="opacity" id="opacidad"min="0" max="1" step="0.1"  value="1">
       </div>
 
       <div class="cont-contraste">
           <label class="contraste" for="contrast">Contraste</label>
-          <input type="range" name = "contrast"  id="contraste" min="100" max="400" step="1" value="100">
+          <input type="range" name = "contrast"  id="contraste" min="100" max="1000" step="1" value="100">
       </div>
 
       <div class="cont-desenfoque">
@@ -149,7 +149,7 @@
 
         <div class="cont-negativo">
             <label class="negativo" for="invert">Negativo</label>
-            <input type="range" id="negativo" min="0" max="1" step="0.1" value="0">
+            <input type="range" id="negativo" min="0" max="1" step="0.1" value="1 ">
         </div>
 
         <button class="reestablecer" id="reestablecer"> Reestablecer Filtros</button>
@@ -186,14 +186,14 @@
           <label for="option">Fuente</label>
           <select name="option" id="option">
             <option class="arial" value="arial">Arial</option>
-            <option class="arialblack" value="arial-black">Arial Black</option>
-            <option class="american" value="american-typewriter">American Typewriter</option>
-            <option value="andale-mono">Andale Mono</option>
-            <option class="opensans" value="Sans  ">Open Sans</option>
+            <option class="arialblack" value="arial black">Arial Black</option>
+            <option class="kalam" value="Kalam">Kalam</option>
+            <option class="roboto"value="roboto mono">Roboto Mono</option>
+            <option class="ubuntu" value="Ubuntu">Ubuntu</option>
             <option class="Impact" value="Impact">Impact</option>
-            <option class="Helvetica" value="helvetica">Helvetica</option>
+            <option class="montserrat" value="montserrat">Montserrat</option>
             <option class="verdana" value="verdana">Verdana</option>
-            <option class= "times" value="Times-new-roman">Times New Roman</option>
+            <option class= "times new Roman" value="Times-new-roman">Times New Roman</option>
           </select>
         </div>
         <div class="font-button">

@@ -47,8 +47,11 @@ const downloadBut = document.getElementById('download-but')
 const interlineado = document.getElementById('interlineado')
 const dayNight = document.getElementById('day-night')
 const adjust = document.getElementById('adjust')
+const mbackcolor = document.getElementById('mback-color')
+const estilosBack = document.getElementById('estilos-back')
 
-/* boton texto */
+
+/////////////////* funcionalidad seccion texto */////////////////////////
 topInput.addEventListener('keyup', () => {
   firstText.innerHTML = topInput.value;
 });
@@ -74,7 +77,7 @@ topcheck2.addEventListener('click', () =>{
   }
 })
 
-
+/* Edición Fuentes */
 option.addEventListener('change', () => {
   firstText.style.fontFamily = `${option.value}`;
   secondText.style.fontFamily = `${option.value}`
@@ -141,7 +144,7 @@ transparente.addEventListener('click',(e) => {
 
 /* contorno */
 
-//////////////////////* sin funcionar *///////////////////////////
+//////////////////////* sin funcionar *///////////////////////
 bordeClaro.addEventListener('click', (e) => {
   firstText.style.textShadow = '3px 1px 1px white';
   secondText.style.textShadow = '3px 1px 1px white';
@@ -151,7 +154,7 @@ bordeOscuro.addEventListener('click', () => {
   firstText.style.textShadow  = '1px black';
   secondText.style.textShadow  = '2px black';
 })
-//////////////////////* sin funcionar *///////////////////////////
+//////////////////////* sin funcionar *//////////////////////
 
 
 /* espaciado */
@@ -182,7 +185,7 @@ checkbox.addEventListener('click',()=>{
     aside.style.backgroundColor = '#2b2f3a'
     aside.style.color = 'aliceblue';
     dayNight.style.backgroundColor = '#2b2f3a';
-    adjust.style.color = 'rgb(182, 182, 180)'
+    adjust.style.color = 'rgb(182, 182, 180)';
 
   } else{
     firstSection.style.backgroundColor = 'rgb(182, 182, 180)';
@@ -195,7 +198,7 @@ checkbox.addEventListener('click',()=>{
   }
 })
 
-/* funcionalidad boton IMG */
+///////////////////////* funcionalidad seccion IMG */////////////////////////
 
 urlImg.addEventListener('keyup', (e)=>{
   const src = urlImg.value;
@@ -205,11 +208,18 @@ urlImg.addEventListener('keyup', (e)=>{
   centerText.style.backgroundSize = 'contain';
 })
 
-
 colorBack.addEventListener ('input', (e)=>{
   centerText.style.backgroundColor = e.target.value;
+  
 })
+////////////////* falta reflejar el nro de rgb en label */////////
 
+/////////////////* no funciona *////////////
+
+const estilosBackG = ('change',() =>{
+  centerText.style.mixBlendMode = estilosBack.value;
+})
+/////////////////* no funciona *////////////
 
 /* Filtros imagen */
 
@@ -227,21 +237,26 @@ hue.addEventListener('change', filtroImg);
 saturado.addEventListener('change', filtroImg);
 negativo.addEventListener('change', filtroImg);
 
-/* boton reestablecer filtros */
+/* boton reestablecer filtros ERROR YA QUE BORRA LA IMG */
 
 reestablecer.addEventListener('click',()=>{
   brillo.value = '1'
   opacidad.value = '1'
   contraste.value = '100'
-  desenfoque.value = '1'
-  grises.value = '1'
-  sepia.value = '1'
-  hue.value = '1'
+  desenfoque.value = '0'
+  grises.value = '0'
+  sepia.value = '0'
+  hue.value = '0'
   saturado.value = '100'
   negativo.value = '1'
   
 
-})
+});
+
+/* estilos ranges */
+
+
+
 
 /* funcionalidad botones IMAGEN y TEXTO */
 
