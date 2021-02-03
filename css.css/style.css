@@ -103,9 +103,11 @@
   
 .center-text{
     width: 100%;
-    height: auto;
+    height: 300px;
     padding: 20%;
     background-color: black;
+   
+    
   }
 
   

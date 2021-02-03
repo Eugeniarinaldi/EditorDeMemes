@@ -64,6 +64,10 @@ bot.addEventListener('keyup', () => {
 topCheck.addEventListener('click',() => {
   if(topCheck.checked){
     firstText.style.display = 'none';
+    firstText.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    firstText.style.zIndex = '100'
+    /*firstText.style.position = 'absolute'*/
+
   } else{
     firstText.style.display = 'block';
   }
@@ -129,6 +133,7 @@ fondo.addEventListener('input', (e) =>{
 transparente.addEventListener('click',(e) => {
   if (e.target.checked){
     firstText.style.backgroundColor = 'black';
+    firstText.style.zIndex = '1'
   }else{
     firstText.style.backgroundColor = 'white'
   }
@@ -146,15 +151,20 @@ transparente.addEventListener('click',(e) => {
 
 //////////////////////* sin funcionar *///////////////////////
 bordeClaro.addEventListener('click', (e) => {
-  firstText.style.textShadow = '3px 1px 1px white';
-  secondText.style.textShadow = '3px 1px 1px white';
+  firstText.style.textShadow = 'rgb(182, 180, 180) 9px 5px 5px ';
+  secondText.style.textShadow = 'rgb(182, 180, 180) 9px 5px 5px'
+
 })
 
 bordeOscuro.addEventListener('click', () => {
-  firstText.style.textShadow  = '1px black';
-  secondText.style.textShadow  = '2px black';
+  firstText.style.textShadow  = '#2b2f3a 9px 5px 5px';
+  secondText.style.textShadow  = '#2b2f3a 9px 5px 5px';
 })
-//////////////////////* sin funcionar *//////////////////////
+
+ninguno.addEventListener('click', () =>{
+  firstText.style.textShadow = 'none'
+  secondText.style.textShadow = 'none'
+})
 
 
 /* espaciado */
@@ -210,12 +220,11 @@ urlImg.addEventListener('keyup', (e)=>{
 
 colorBack.addEventListener ('input', (e)=>{
   centerText.style.backgroundColor = e.target.value;
-  
+  mbackcolor.innerHTML = e.target.value;
 })
-////////////////* falta reflejar el nro de rgb en label */////////
+
 
 /////////////////* no funciona *////////////
-
 const estilosBackG = ('change',() =>{
   centerText.style.mixBlendMode = estilosBack.value;
 })
@@ -248,8 +257,9 @@ reestablecer.addEventListener('click',()=>{
   sepia.value = '0'
   hue.value = '0'
   saturado.value = '100'
-  negativo.value = '1'
+  negativo.value = '0'
   
+  filtroImg()
 
 });
 
@@ -267,9 +277,16 @@ imgBut.addEventListener('click',(e)=>{
 })
 
 txtBut.addEventListener('click',(e)=>{
-  texto.style.display = '';
+  texto.style.display = 'block';
   img.style.display = 'none';
+ 
 })
 
 /* boton descargar meme */
 
+downloadBut.addEventListener('click',(e)=>{
+  domtoimage.toBlob(document.getElementById('section'))
+    .then(function (blob) {
+        window.saveAs(blob, 'meme.png');
+    });
+})

@@ -17,7 +17,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat&family=Open+Sans&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css.css/style.css">
-  <link rel="stylesheet" href="css.css/modoClaroOscuro.css">
   <link rel="stylesheet" id="mainstyle" href="">
   <script src="https://kit.fontawesome.com/4461fe01ff.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href=""> 
@@ -60,7 +59,7 @@
         <article id="second-text" class="bottom-text">BOTTOM TEXT</article>
       </section>
 
-      <button class="download-but">
+      <button id ="download-but" class="download-but">
         Descargar Meme 
         <i class="fas fa-download button-icon-text green-button-icon" aria-hidden="true"></i>
     </button>
@@ -152,14 +151,14 @@
             <input type="range" id="negativo" min="0" max="1" step="0.1" value="1 ">
         </div>
 
-        <button class="reestablecer" id="reestablecer"> Reestablecer Filtros</button>
+        <button type="button" class= "reestablecer" id="reestablecer"> Reestablecer Filtros</button>
 
-      </section>  
+    </section>  
 
       <!-- EDICION TEXTO -->   
 
       <!--  TEXTO SUPERIOR E INFERIOR -->
-    <section id="texto" class="texto">
+    <section id="texto" hidden="hidden" class="texto">
       <h2 class="titulo-aside">TEXTO</h2>
 
         <div>
@@ -231,9 +230,9 @@
         </div>
 
         <div class="buton-contorno">
-          <button class="ninguno">Ninguno</button>
-          <button class="claro" id="borde-claro">Claro</button>
-          <button class="oscuro" id="borde-oscuro">Oscuro</button>
+          <button type="button" class="ninguno" id="ninguno">Ninguno</button>
+          <button type ="button" class="claro" id="borde-claro">Claro</button>
+          <button type="button" class="oscuro" id="borde-oscuro">Oscuro</button>
         </div>
 
 
@@ -258,7 +257,9 @@
     </section>
     </aside>
   
-  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous"></script>
+
     <script src="JS/app.js"></script>
   </body>
 </html>
