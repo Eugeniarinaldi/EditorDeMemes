@@ -394,13 +394,31 @@ input, select{
 
 /* Media Queries */ 
 
-@media (max-width: 800)and (min-width:270px){
+@media (max-width: 1050px) and (min-width:270px){
   .aside{
+    width: 100%;
       display: none;
-      width: 100%;
       overflow: scroll;
+
+
   }
-    .img{
-      display: none;
-  }
+ .first-section{
+   width:100% ;
+ }
+ .main{
+   width: 100%;
+ }
+ .top-input,.bottom-text{
+   font-size: 1.2rem;
+   max-height: 5rem;
+ }
+ .main-title{
+   font-size: 1.5rem;
+ }
+ .botones-centrales{
+   align-text: center;
+ }
+ .section{
+   width: 80%;
+ }
 }
