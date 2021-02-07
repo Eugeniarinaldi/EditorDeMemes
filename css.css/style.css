@@ -97,7 +97,7 @@
   
 .top-input, .bottom-text{
     width: 100%;
-    height: auto;
+    height: 8.125rem;
     padding: 8%;
   }
   
@@ -112,10 +112,6 @@
 
   
  /*estilos aside */
-/*
- .texto{
-   display: none;
- }*/
 
 .encabezado{
   margin: 2%;
@@ -252,6 +248,7 @@ input, select{
 
 .topcheck{
   margin-right: 1%;
+  
 }
 .buton-contorno button {
   margin: 0 1%;
@@ -368,7 +365,7 @@ input, select{
 .download-but{
   border-radius: 10px;
   border-style: none;
-  height: 2.1875rem;
+  height: 1.8rem;
   width: 10rem;
   background-color: rgb(40, 196, 157);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -393,4 +390,17 @@ input, select{
 
 .green-button-icon{
   padding: 3%;
+}
+
+/* Media Queries */ 
+
+@media (max-width: 800)and (min-width:270px){
+  .aside{
+      display: none;
+      width: 100%;
+      overflow: scroll;
+  }
+    .img{
+      display: none;
+  }
 }

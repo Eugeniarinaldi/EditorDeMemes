@@ -48,7 +48,7 @@ const interlineado = document.getElementById('interlineado')
 const dayNight = document.getElementById('day-night')
 const adjust = document.getElementById('adjust')
 const mbackcolor = document.getElementById('mback-color')
-const estilosBack = document.getElementById('estilos-back')
+const estilosBackSelectImg = document.getElementById('estilos-back')
 
 
 /////////////////* funcionalidad seccion texto */////////////////////////
@@ -132,7 +132,7 @@ fondo.addEventListener('input', (e) =>{
 
 transparente.addEventListener('click',(e) => {
   if (e.target.checked){
-    firstText.style.backgroundColor = 'black';
+    firstText.style.backgroundColor = 'transparent';
     firstText.style.zIndex = '1'
   }else{
     firstText.style.backgroundColor = 'white'
@@ -148,19 +148,15 @@ transparente.addEventListener('click',(e) => {
 })
 
 /* contorno */
-
-//////////////////////* sin funcionar *///////////////////////
 bordeClaro.addEventListener('click', (e) => {
   firstText.style.textShadow = 'rgb(182, 180, 180) 9px 5px 5px ';
   secondText.style.textShadow = 'rgb(182, 180, 180) 9px 5px 5px'
 
 })
-
 bordeOscuro.addEventListener('click', () => {
   firstText.style.textShadow  = '#2b2f3a 9px 5px 5px';
   secondText.style.textShadow  = '#2b2f3a 9px 5px 5px';
 })
-
 ninguno.addEventListener('click', () =>{
   firstText.style.textShadow = 'none'
   secondText.style.textShadow = 'none'
@@ -176,14 +172,11 @@ const espaciadoTexto = () => {
 espaciado.addEventListener('input', espaciadoTexto)
 
 /* interlineado */
-
 const interlinea = ('change', ()=>{
   firstText.style.lineHeight = `${interlineado.value}`
   secondText.style.lineHeight = `${interlineado.value}`
 })
 interlineado.addEventListener('change',interlinea)
-
-
 
 /* Boton claro / oscuro */
 
@@ -225,10 +218,10 @@ colorBack.addEventListener ('input', (e)=>{
 
 
 /////////////////* no funciona *////////////
-const estilosBackG = ('change',() =>{
-  centerText.style.mixBlendMode = estilosBack.value;
+const estilosBackS = ('change',() =>{
+  centerText.style.backgrooundBlendMode = estilosBackSelectImg.value;
 })
-/////////////////* no funciona *////////////
+
 
 /* Filtros imagen */
 
