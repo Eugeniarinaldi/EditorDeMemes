@@ -19,7 +19,7 @@
 
 ### Asi debería verse el proyecto
 
-![imagen](.img/editor.png)
+![imagen](./img/editor.png)
 
 
 # Pseudocódigo de la primer seccion principal de textos superior e inferior
@@ -45,6 +45,6 @@ B = "TOP TEXT" área donde veremos reflejado los datos ingresados
 <br>
 
 
-### Gracias a mis profes Jonh y Leydy, sin su paciencia no hubiera sido posible ❤
+### Gracias a mis profes Jonh y Leydy, sin su ayuda y paciencia no hubiera sido posible ❤
 
 #### Hecho con 💪 & 🧡 por Euge Rinaldi
