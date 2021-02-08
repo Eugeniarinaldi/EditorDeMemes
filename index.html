@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat&family=Open+Sans&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css.css/style.css">
-  <link rel="stylesheet" id="mainstyle" href="img/emoji-risa.ico">
+ 
   <script src="https://kit.fontawesome.com/4461fe01ff.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="img/emoji-risa.ico"> 
   <title>Editor de Memes</title>
@@ -69,7 +69,11 @@
     <!-- EDICION ASIDE IMAGEN / texto --> 
     <aside class="aside" id="aside">
       <form class="formulario">
-      
+        
+        <input type="checkbox" name="check-img" id="check-img" class="checkx">
+        <label for="check-img" aria-label="Cerrar seccion">
+          <i class="fas fa-times cancel" class="cerrar" id="cerrar" aria-hidden="true"></i>
+        </label>
     
      <!-- EDICION FONDO IMAGEN -->   
      <section class="img" id="img"> 
@@ -84,7 +88,7 @@
           
 
          
-          <div class= "color-back">
+          <div class= "color-back" id="color-back">
             <input type="color" id="color-back"value="#ffffff">
               <span id="mback-color" aria-hidden="true">#ffffff
               </span>
@@ -205,14 +209,14 @@
         <div class="font-button">
           <div>
             <label for="color">Color</label>
-            <div class="color-buttons">
+            <div class="color-buttons" id="color-buttons">
               <input type="color" class ="paleta" id="color" value="#000000">
               <span id="color-text">#000000</span>
             </div>
           </div>
           <div>
             <label for="fondo">Fondo</label>
-            <div class="color-buttons">
+            <div class="color-buttons" id= "color-button">
               <input type="color" class="paleta2"id="fondo" value="#ffffff">
               <span id="back-color">#ffffff</span>
             </div>

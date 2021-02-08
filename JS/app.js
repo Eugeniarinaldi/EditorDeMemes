@@ -49,7 +49,10 @@ const dayNight = document.getElementById('day-night')
 const adjust = document.getElementById('adjust')
 const mbackcolor = document.getElementById('mback-color')
 const estilosBackSelectImg = document.getElementById('estilos-back')
-
+const cerrar = document.getElementById ('cerrar')
+const colorBut = document.getElementById('color-buttons')
+const colorBut2 = document.getElementById('color-button')
+const colorFondo = document.getElementById('color-back')
 
 /////////////////* funcionalidad seccion texto */////////////////////////
 topInput.addEventListener('keyup', () => {
@@ -189,6 +192,9 @@ checkbox.addEventListener('click',()=>{
     aside.style.color = 'aliceblue';
     dayNight.style.backgroundColor = '#2b2f3a';
     adjust.style.color = 'rgb(182, 182, 180)';
+    colorBut.style.backgroundColor = '#2b2f3a'
+    colorBut2.style.backgroundColor = '#2b2f3a'
+    colorFondo.style.backgroundColor = '#2b2f3a'
 
   } else{
     firstSection.style.backgroundColor = 'rgb(182, 182, 180)';
@@ -282,4 +288,24 @@ downloadBut.addEventListener('click',(e)=>{
     .then(function (blob) {
         window.saveAs(blob, 'meme.png');
     });
+})
+
+/* btn cerrar aside */ 
+cerrar.addEventListener('click',(e)=>{
+  aside.style.display= 'none';
+  
+})
+
+imgBut.addEventListener('click',(e)=>{
+  aside.style.display= 'block'
+  img.style.display = 'block';
+  texto.style.display = 'none';
+
+})
+
+txtBut.addEventListener('click',(e)=>{
+  aside.style.display= 'block'
+  img.style.display = 'none';
+  texto.style.display = 'block';
+
 })
