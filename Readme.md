@@ -3,7 +3,7 @@
 ### Aplicación para generar tus propios memes, y luego de descargarlos puedas compartirlo en tus redes sociales
 
 ### Proyecto final del Módulo 2 de Desarrollo FrontEnd en ADA Itw. Hecho con Javascript, HTML5, y CSS 3.
-### Podés acceder a mi proyecto y generar tu popio meme en este [enlace] https://github.com/Eugeniarinaldi/EditorDeMemes 
+### Podés acceder a mi proyecto y generar tu popio meme en este [enlace] (https://github.com/Eugeniarinaldi/EditorDeMemes) 
 
 
 ### Si queres tener el codigo en tu computadora deberas seguir estos pasos en tu terminal.

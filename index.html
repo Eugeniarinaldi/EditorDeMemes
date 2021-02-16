@@ -30,14 +30,14 @@
         <h1 class="main-title" id="main-title">Generador de Memes</h1>
         
       <div class="botones-centrales">
-        <button class="img-but" id="img-but">
+        <button class="img-but" id="img-but" aria-label="Editor de imagen">
           <i class="far fa-file-image"></i> Imagen
         </button>
         
-        <button class="txt-but" id= "txt-but">
+        <button class="txt-but" id= "txt-but"aria-label="Editor de texto">
           <i class="fas fa-font"></i> Texto</button>
         
-        <div class="day-night" id="day-night">
+        <div class="day-night" id="day-night"aria-label="Cambiar a modo noche">
             <i class="fas fa-adjust" id="adjust"></i>
           <input type="checkbox" class="checkbox" id="checkbox">
           <label for="checkbox" class="sun-moon">
@@ -54,9 +54,9 @@
 
     <main class="main" id="main">
       <section class="section" id="section">
-        <article id="first-text" class="top-input">TOP TEXT</article>
-        <article class="center-text"id='center-text'></article>
-        <article id="second-text" class="bottom-text">BOTTOM TEXT</article>
+        <article id="first-text" class="top-input"aria-label="Ingrese texto superior">TEXTO SUPERIOR</article>
+        <article class="center-text"id='center-text'aria-label="Imagen de meme"></article>
+        <article id="second-text" class="bottom-text" aria-label="Ingrese el texto inferior">TEXTO INFERIOR</article>
       </section>
 
       <button id ="download-but" class="download-but">
@@ -81,14 +81,14 @@
         <h2 class="titulo-aside">IMAGEN</h2>
         
         <div class="encabezado">
-          <label for="url" URL class="url" >URL</label>
+          <label for="url" URL class="url"aria-label="ingresa la url de la imagen" >URL</label>
           <input type="text" id="url-img">  
 
           <h4 class="fondo">FONDO</h4>
           
 
          
-          <div class= "color-back" id="color-back">
+          <div class= "color-back" id="color-back" aria-label="Selector tipo de fondo de imagen">
             <input type="color" id="color-back"value="#ffffff">
               <span id="mback-color" aria-hidden="true">#ffffff
               </span>
@@ -208,16 +208,16 @@
         <!--  COLORES FONDO Y FUENTE -->
         <div class="font-button">
           <div>
-            <label for="color">Color</label>
+            <label for="color">Texto</label>
             <div class="color-buttons" id="color-buttons">
-              <input type="color" class ="paleta" id="color" value="#000000">
+              <input type="color" class ="paleta" id="color" value="#000000"aria-label="Color de texto">
               <span id="color-text">#000000</span>
             </div>
           </div>
           <div>
             <label for="fondo">Fondo</label>
             <div class="color-buttons" id= "color-button">
-              <input type="color" class="paleta2"id="fondo" value="#ffffff">
+              <input type="color" class="paleta2"id="fondo" value="#ffffff" aria-label="Color de fondo">
               <span id="back-color">#ffffff</span>
             </div>
           </div>
@@ -233,9 +233,9 @@
         </div>
 
         <div class="buton-contorno">
-          <button type="button" class="ninguno" id="ninguno">Ninguno</button>
-          <button type ="button" class="claro" id="borde-claro">Claro</button>
-          <button type="button" class="oscuro" id="borde-oscuro">Oscuro</button>
+          <button type="button" class="ninguno" id="ninguno"aria-label="Sin contorno de texto">Ninguno</button>
+          <button type ="button" class="claro" id="borde-claro"aria-label="Contorno claro de texto">Claro</button>
+          <button type="button" class="oscuro" id="borde-oscuro"aria-label="Contorno oscuro de texto">Oscuro</button>
         </div>
 
 
