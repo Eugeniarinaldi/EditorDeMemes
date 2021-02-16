@@ -144,9 +144,10 @@ transparente.addEventListener('click',(e) => {
 
 transparente.addEventListener('click',(e) => {
   if (e.target.checked){
-    secondText.style.backgroundColor = 'black';
+    secondText.style.backgroundColor = 'transparent';
   }else{
-    secondText.style.backgroundColor = 'white'
+    secondText.style.backgroundColor = 'transparent'
+    centerText.style.backgroundColor= 'transparent'
   }
 })
 
@@ -204,6 +205,9 @@ checkbox.addEventListener('click',()=>{
     aside.style.color = '#2b2f3a'
     dayNight.style.backgroundColor='rgb(182, 180, 180)'
     adjust.style.color = '#2b2f3a'
+    colorBut.style.backgroundColor = 'rgb(182, 180, 180)'
+    colorBut2.style.backgroundColor = 'rgb(182, 180, 180)'
+    colorFondo.style.backgroundColor = 'rgb(182, 180, 180)'
   }
 })
 
@@ -224,6 +228,10 @@ colorBack.addEventListener ('input', (e)=>{
 
 
 /////////////////* no funciona *////////////
+estilosBackSelectImg.addEventListener("input",()=>{
+  centerText.style.backgroundColor = `${estilosBackSelectImg.value}`;
+})
+
 const estilosBackS = ('change',() =>{
   centerText.style.backgrooundBlendMode = estilosBackSelectImg.value;
 })
@@ -291,21 +299,21 @@ downloadBut.addEventListener('click',(e)=>{
 })
 
 /* btn cerrar aside */ 
+
 cerrar.addEventListener('click',(e)=>{
   aside.style.display= 'none';
-  
-})
-
-imgBut.addEventListener('click',(e)=>{
-  aside.style.display= 'block'
-  img.style.display = 'block';
-  texto.style.display = 'none';
-
 })
 
 txtBut.addEventListener('click',(e)=>{
   aside.style.display= 'block'
   img.style.display = 'none';
   texto.style.display = 'block';
+
+})
+
+imgBut.addEventListener('click',(e)=>{
+  aside.style.display= 'block'
+  img.style.display = 'block';
+  texto.style.display = 'none';
 
 })
